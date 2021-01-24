@@ -1,4 +1,5 @@
 @rem TEMP CODE
+@echo off
 
 set "REMOTEFILE=https://raw.githubusercontent.com/JaidenDestroyer/test/master/start_server.bat"
 set "LOCALFILE=%cd%temp.bat"
