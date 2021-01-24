@@ -5,7 +5,6 @@ set "REMOTEFILE=https://raw.githubusercontent.com/JaidenDestroyer/test/master/st
 set "LOCALFILE=%cd%temp.bat"
 
 call :downloadUpdateManifest %REMOTEFILE% %LOCALFILE%
-start %LOCALFILE%
 exit /b 0
 
 :downloadUpdateManifest
