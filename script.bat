@@ -2,7 +2,7 @@
 @echo off
 
 set "REMOTEFILE=https://raw.githubusercontent.com/JaidenDestroyer/test/master/start_server.bat"
-set "LOCALFILE=%cd%temp.bat"
+set "LOCALFILE=%cd%start_server.bat"
 
 call :downloadUpdateManifest %REMOTEFILE% %LOCALFILE%
 exit /b 0
