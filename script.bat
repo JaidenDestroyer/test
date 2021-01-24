@@ -11,8 +11,8 @@ exit /b 0
 	setlocal
 	for /f %%G in ('bitsadmin /rawreturn /create "UpdateManifestDownload"') do set "guid=%%G"
 	bitsadmin /rawreturn /addfile %guid% "%~1" "%~2" > nul
-	bitsadmin /rawreturn /setnotifycmdline %guid% "cmd.exe" "/c waitfor /si UpdateManifestDownloadComplete" > nul
-	bitsadmin /rawreturn /resume %guid% > nul & waitfor /t 10 "UpdateManifestDownloadComplete" > nul
+	bitsadmin /rawreturn /setnotifycmdline %guid% "cmd.exe" "/c waitfor /si TEMPDOWNLOADCOMPLETE" > nul
+	bitsadmin /rawreturn /resume %guid% > nul & waitfor /t 10 "TEMPDOWNLOADCOMPLETE" > nul
 	for /f %%G in ('bitsadmin /rawreturn /getstate %guid%') do if "%%G"=="TRANSFERRED" echo File transferred to %~2
 	bitsadmin /rawreturn /complete %guid% > nul
 	endlocal
