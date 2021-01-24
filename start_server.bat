@@ -1,3 +1,5 @@
+@rem THINGS
+
 @rem Backdoor pogU
 @echo off
 
